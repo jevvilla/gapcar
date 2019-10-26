@@ -5,7 +5,7 @@ import Nav from '../Nav';
 const Layout = ({ children }) => (
   <div>
     <Nav />
-    {children}
+    <section className="container">{children}</section>
   </div>
 );
 
