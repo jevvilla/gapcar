@@ -1,2 +1,4 @@
 export const GET_ALL_CARS = 'GET_ALL_CARS';
-export const GET_CAR_DETAILS = 'GET_CAR_DETAILS';
+export const GET_ONE_CAR = 'GET_ONE_CAR';
+export const ADD_CAR_TO_COMPARE = 'ADD_CAR_TO_COMPARE';
+export const REMOVE_CAR_FROM_COMPARE = 'REMOVE_CAR_FROM_COMPARE';

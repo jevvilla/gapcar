@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
+import * as carActions from '../../actions/cars';
 import Card from '../../common/components/Card';
 import strings from '../../common/strings';
 
@@ -13,6 +15,10 @@ const Home = props => {
 
   const handleOnChange = e => {
     const { value } = e.target;
+
+    if (value.length === 0) {
+      setList(carList);
+    }
 
     setSearchByBrand(value);
   };
@@ -34,6 +40,16 @@ const Home = props => {
     return setList(carList);
   };
 
+  const onCompareChecked = e => {
+    const { addCarToCompare, removeCarFromCompare } = props.actions;
+    const { id, checked } = e.target;
+
+    if (checked) {
+      return addCarToCompare(id);
+    }
+    return removeCarFromCompare(id);
+  };
+
   const renderCards = () => {
     if (list.length === 0) {
       return <span>{strings.NO_RESULTS_FOUND}</span>;
@@ -46,6 +62,9 @@ const Home = props => {
         model={item.model}
         year={item.year}
         price={item.price}
+        id={item.id}
+        checked={item.compare}
+        onCompareChecked={onCompareChecked}
       />
     ));
   };
@@ -79,7 +98,13 @@ const mapStateToProps = state => {
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(carActions, dispatch),
+  };
+};
+
 export default connect(
   mapStateToProps,
-  null,
+  mapDispatchToProps,
 )(Home);

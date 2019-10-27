@@ -5,8 +5,11 @@ export default {
   COMPARE: 'Compare',
 
   // HOME
-  PRICE: 'Precio',
-  SEARCH_PLACEHOLDER: 'Buscar por marca',
-  SEARCH_BUTTON_TITLE: 'Buscar',
+  PRICE: 'Price',
+  SEARCH_PLACEHOLDER: 'Search by brand',
+  SEARCH_BUTTON_TITLE: 'Search',
   NO_RESULTS_FOUND: 'No Results Found',
+
+  // CARD COMPONENT
+  ADD_TO_COMPARE: 'Add to compare',
 };
