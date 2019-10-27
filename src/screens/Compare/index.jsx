@@ -3,14 +3,24 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import * as carActions from '../../actions/cars';
+import strings from '../../common/strings';
 
 const Compare = props => {
   const { carList } = props.cars;
   const [carsToCompare, setCarsToCompare] = useState([]);
+
   useEffect(() => {
     const result = carList.filter(item => item.compare === true);
     setCarsToCompare(result);
   }, []);
+
+  if (carsToCompare.length < 2) {
+    return (
+      <div>
+        <span>{strings.ADD_MORE_THAN_ONE}</span>
+      </div>
+    );
+  }
 
   return (
     <div className="card-deck">

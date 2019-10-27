@@ -12,4 +12,5 @@ export default {
 
   // CARD COMPONENT
   ADD_TO_COMPARE: 'Add to compare',
+  ADD_MORE_THAN_ONE: 'Please add more than one car to compare',
 };

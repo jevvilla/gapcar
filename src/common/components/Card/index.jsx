@@ -26,7 +26,7 @@ const Card = props => {
                 className="form-check-input"
                 id={id}
                 onChange={onCompareChecked}
-                checked={checked}
+                defaultChecked={checked}
               />
               <label className="form-check-label" htmlFor={id}>
                 {strings.COMPARE}
