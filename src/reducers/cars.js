@@ -8,6 +8,7 @@ const initialState = {
       model: 'Mazda 3 Touring',
       year: '2018',
       brand: 'Mazda',
+      price: '$41,000,000',
     },
     {
       id: '5db49e462c94762384-000004765',
@@ -15,6 +16,7 @@ const initialState = {
       model: 'Mazda CX-5',
       year: '2018',
       brand: 'Mazda',
+      price: '$60,000,000',
     },
     {
       id: '5db49e46fc13ae12c900000-364p',
@@ -22,6 +24,7 @@ const initialState = {
       model: 'Mazda 3 Sedan Prime',
       year: '2017',
       brand: 'Mazda',
+      price: '$45,600,000',
     },
     {
       id: '5db49e41928694-19286940-364p',
@@ -29,6 +32,7 @@ const initialState = {
       model: 'Ford Edge Limited',
       year: '2014',
       brand: 'Ford',
+      price: '$38,700,000',
     },
     {
       id: '5db49e4-19154946940-0099888',
@@ -36,6 +40,7 @@ const initialState = {
       model: 'Ford Explorer',
       year: '2014',
       brand: 'Ford',
+      price: '$22,000,000',
     },
     {
       id: '5db4wwebsmj91873314_15_m99888',
@@ -43,6 +48,7 @@ const initialState = {
       model: 'Ford Mustang GT Premium',
       year: '2019',
       brand: 'Ford',
+      price: '$230,000,000',
     },
     {
       id: '5db4wwebsmj91871919-1919972_2_m9',
@@ -50,6 +56,7 @@ const initialState = {
       model: 'Toyota Land Cruiser',
       year: '1997',
       brand: 'Toyota',
+      price: '$140,000,000',
     },
   ],
 };
