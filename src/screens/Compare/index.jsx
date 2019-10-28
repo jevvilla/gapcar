@@ -16,14 +16,14 @@ const Compare = props => {
 
   if (carsToCompare.length < 2) {
     return (
-      <div>
+      <div className="pt-5">
         <span>{strings.ADD_MORE_THAN_ONE}</span>
       </div>
     );
   }
 
   return (
-    <div className="card-deck">
+    <div className="card-deck pt-5">
       {carsToCompare.map(car => {
         return (
           <div key={car.id} className="card">

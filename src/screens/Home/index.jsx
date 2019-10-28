@@ -89,8 +89,8 @@ const Home = props => {
 
   return (
     <>
-      <div className="row">
-        <div className="input-group col-3 no-padding">
+      <div className="row justify-content-md-center pt-5">
+        <div className="input-group col-5 no-padding">
           <input
             type="text"
             className="form-control"
@@ -105,7 +105,7 @@ const Home = props => {
           </div>
         </div>
       </div>
-      <div className="row justify-content-md-left cars-container ">{renderCards()}</div>
+      <div className="row cars-container ">{renderCards()}</div>
     </>
   );
 };

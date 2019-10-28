@@ -18,7 +18,7 @@ const Details = props => {
   }
 
   return (
-    <div className="row justify-content-md-center">
+    <div className="row justify-content-md-center pt-5">
       <div className="card col-7">
         <img className="card-img-top" src={car.image} alt={car.model} />
         <div className="card-body">
