@@ -13,4 +13,10 @@ export default {
   // CARD COMPONENT
   ADD_TO_COMPARE: 'Add to compare',
   ADD_MORE_THAN_ONE: 'Please add more than one car to compare',
+
+  // DETAILS
+  CAR_NOT_FOUND: 'Car not found',
+
+  // NOT FOUND
+  NOT_FOUND_MESSAGE: 'Not found',
 };

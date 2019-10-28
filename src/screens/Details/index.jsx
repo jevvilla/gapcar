@@ -2,10 +2,20 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import strings from '../../common/strings';
+
 const Details = props => {
   const { id } = useParams();
   const { carList } = props.cars;
   const car = carList.find(item => item.id === id);
+
+  if (!car) {
+    return (
+      <div>
+        <span>{strings.CAR_NOT_FOUND}</span>
+      </div>
+    );
+  }
 
   return (
     <div className="row justify-content-md-center">

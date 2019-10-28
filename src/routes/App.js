@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../screens/Home';
 import Details from '../screens/Details';
 import Compare from '../screens/Compare';
+import NotFound from '../screens/NotFound';
 import Layout from '../common/components/Layout';
 
 import * as path from './paths';
@@ -15,6 +16,7 @@ const App = () => (
         <Route exact path={path.ROOT} component={Home} />
         <Route exact path={`/${path.DETAILS}/:id`} component={Details} />
         <Route exact path={`/${path.COMPARE}`} component={Compare} />
+        <Route component={NotFound} />
       </Switch>
     </Layout>
   </BrowserRouter>
