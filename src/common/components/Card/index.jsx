@@ -11,34 +11,28 @@ const Card = props => {
 
   return (
     <div className="card">
-      <img src={image} alt={model} className="car-image" />
       <div className="card-body">
-        <h5 className="card-title">{model}</h5>
-        <p className="card-text">{brand}</p>
-        <span>{`${strings.PRICE}: ${price}`}</span>
-        <div className="row padding pt-3">
-          <div className="col-4">
-            <Link to={`/${paths.DETAILS}/${id}`}>
-              <button type="button" className="btn btn-primary btn-sm">
-                {strings.DETAILS}
-              </button>
-            </Link>
-          </div>
-          <div className="col-7">
-            <div className="form-group form-check">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id={id}
-                onChange={onCompareChecked}
-                defaultChecked={checked}
-                disabled={isDisabled(id)}
-              />
-              <label className="form-check-label" htmlFor={id}>
-                {strings.COMPARE}
-              </label>
-            </div>
-          </div>
+        <img src={image} alt={model} className="car-image" />
+        <h5 className="card-title pt-3">{model}</h5>
+        <h5 className="card-title">{brand}</h5>
+        <p className="card-text">{`${strings.PRICE}: ${price}`}</p>
+        <Link to={`/${paths.DETAILS}/${id}`}>
+          <button type="button" className="btn btn-primary btn-sm">
+            {strings.DETAILS}
+          </button>
+        </Link>
+        <div className="form-group form-check pt-3">
+          <input
+            type="checkbox"
+            className="form-check-input"
+            id={id}
+            onChange={onCompareChecked}
+            defaultChecked={checked}
+            disabled={isDisabled(id)}
+          />
+          <label className="form-check-label" htmlFor={id}>
+            {strings.COMPARE}
+          </label>
         </div>
       </div>
     </div>
