@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import strings from '../../strings';
+import * as paths from '../../../routes/paths';
 import './styles.css';
 
 const Card = props => {
@@ -15,9 +17,11 @@ const Card = props => {
         <span>{`${strings.PRICE}: ${price}`}</span>
         <div className="row padding pt-3">
           <div className="col-4">
-            <button type="button" className="btn btn-primary btn-sm">
-              {strings.DETAILS}
-            </button>
+            <Link to={`/${paths.DETAILS}/${id}`}>
+              <button type="button" className="btn btn-primary btn-sm">
+                {strings.DETAILS}
+              </button>
+            </Link>
           </div>
           <div className="col-7">
             <div className="form-group form-check">
