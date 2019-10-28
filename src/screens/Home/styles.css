@@ -1,0 +1,16 @@
+.cars-container {
+  padding: 50px 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}

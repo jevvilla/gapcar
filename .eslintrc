@@ -1,0 +1,45 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/prop-types": 0,
+    "no-underscore-dangle": 0,
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-closing-tag-location": 0,
+    "react/jsx-curly-spacing": 0,
+    "react/jsx-equals-spacing": 0,
+    "react/jsx-first-prop-new-line": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": 0,
+    "react/jsx-max-props-per-line": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-tag-spacing": 0,
+    "react/jsx-wrap-multilines": 0,
+    "react/jsx-props-no-multi-spaces": 0,
+    "react/self-closing-comp": 0,
+    "no-use-before-define": 0,
+    "import/no-cycle": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-console": "warn",
+    "max-len": ["error", { "code": 100 }]
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "parser": "babel-eslint"
+}
