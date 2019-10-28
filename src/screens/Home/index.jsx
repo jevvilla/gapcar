@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import * as carActions from '../../actions/cars';
 import Card from '../../common/components/Card';
 import strings from '../../common/strings';
+import constants from '../../common/constants';
 
 import './styles.css';
 
@@ -12,6 +13,22 @@ const Home = props => {
   const { carList } = props.cars;
   const [list, setList] = useState(carList);
   const [searchByBrand, setSearchByBrand] = useState(null);
+  const [selectedCars, setSelectedCars] = useState([]);
+
+  useEffect(() => {
+    const selected = carList.filter(car => {
+      if (car.compare === true) {
+        return car.id;
+      }
+      return null;
+    });
+    setSelectedCars(selected);
+  }, [carList]);
+
+  const isDisabled = id => {
+    const isSelected = selectedCars.findIndex(car => car.id === id);
+    return selectedCars.length > constants.MAX_CARS_TO_COMPARE - 1 && isSelected === -1;
+  };
 
   const handleOnChange = e => {
     const { value } = e.target;
@@ -65,6 +82,7 @@ const Home = props => {
         id={item.id}
         checked={item.compare}
         onCompareChecked={onCompareChecked}
+        isDisabled={isDisabled}
       />
     ));
   };

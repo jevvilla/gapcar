@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import strings from '../../strings';
 import * as paths from '../../../routes/paths';
 import './styles.css';
 
 const Card = props => {
-  const { image, model, brand, price, id, onCompareChecked, checked } = props;
+  const { image, model, brand, price, id, onCompareChecked, checked, isDisabled } = props;
 
   return (
     <div className="card">
@@ -31,6 +32,7 @@ const Card = props => {
                 id={id}
                 onChange={onCompareChecked}
                 defaultChecked={checked}
+                disabled={isDisabled(id)}
               />
               <label className="form-check-label" htmlFor={id}>
                 {strings.COMPARE}
@@ -41,6 +43,21 @@ const Card = props => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  image: PropTypes.string.isRequired,
+  model: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  onCompareChecked: PropTypes.func.isRequired,
+  checked: PropTypes.bool,
+  isDisabled: PropTypes.func.isRequired,
+};
+
+Card.defaultProps = {
+  checked: false,
 };
 
 export default Card;
